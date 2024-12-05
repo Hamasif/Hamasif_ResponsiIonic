@@ -6,6 +6,7 @@ import { useAuthStore } from '@/stores/auth';
 import ProfilePage from '@/views/ProfilePage.vue';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '@/utils/firebase';
+import DetailPage from '@/views/DetailPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -35,6 +36,11 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       isAuth: true,
     },
+  },
+  {
+    path: '/detail/:id',
+    name: 'DetailPage',
+    component: DetailPage,
   },
 ];
 
